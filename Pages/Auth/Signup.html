@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crea tu cuenta - StackLibris</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- CSS principal (ruta relativa según SPEC.md) -->
+    <link rel="stylesheet" href="../../css/styles.css">
+</head>
+<body class="bg-neutral">
+
+    <!-- Header simple de Auth -->
+    <header class="navbar navbar--auth">
+        <div class="navbar__container">
+            <a href="../../index.html" class="navbar__logo">
+                <!-- Se usa la imagen que subiste -->
+                <img src="../../img/Hero Media.png" alt="Logo StackLibris" class="navbar__logo-img" width="30">
+                <span class="navbar__logo-text">StackLibris<br><small style="font-size: 10px; color: var(--color-neutral); font-weight: 400;">Registro de escritorio</small></span>
+            </a>
+            <nav class="navbar__nav">
+                <a href="../../index.html" class="navbar__link">Inicio</a>
+                <a href="#" class="navbar__link">Bibliotecas</a>
+                <a href="#" class="navbar__link">Recursos</a>
+            </nav>
+            <div class="navbar__actions">
+                <a href="login.html" class="btn btn--outline" style="border-radius: 20px; color: var(--color-primary); border-color: var(--color-primary);">Iniciar sesión</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="auth-layout">
+        <!-- Columna de texto descriptivo (solo visible en desktop) -->
+        <section class="auth-layout__text">
+            <span class="hero__badge" style="background-color: #EBF5FF;">NUEVO REGISTRO</span>
+            <h1 class="hero__title">Crea tu cuenta en StackLibris</h1>
+            <p class="hero__description">Únete a la comunidad StackLibris</p>
+        </section>
+
+        <!-- Columna del Formulario -->
+        <section class="auth-layout__form">
+            <div class="auth-card">
+                <div class="auth-card__header">
+                    <img src="../../img/Hero Media.png" alt="Icono Libros" class="auth-card__icon" width="80">
+                    <h2 class="section-title">Crea tu cuenta</h2>
+                    <p class="section-description" style="margin-bottom: var(--space-md);">Únete a la comunidad StackLibris</p>
+                </div>
+
+                <form class="auth-form" action="../estudiante/inicio.html">
+                    <div class="auth-form__field">
+                        <input type="text" class="auth-form__input" placeholder="Nombre completo" required>
+                    </div>
+                    
+                    <div class="auth-form__field">
+                        <input type="email" class="auth-form__input" placeholder="Correo institucional" required>
+                        <!-- Mensaje de error oculto por defecto -->
+                        <p class="auth-form__error">ⓘ Este correo ya está registrado o no es válido</p>
+                    </div>
+
+                    <div class="auth-form__field">
+                        <input type="password" class="auth-form__input" placeholder="Contraseña" minlength="8" required>
+                    </div>
+
+                    <div class="auth-form__field">
+                        <input type="password" class="auth-form__input" placeholder="Confirmar contraseña" minlength="8" required>
+                        <p class="auth-form__error">ⓘ La contraseña no es la misma</p>
+                    </div>
+
+                    <div class="auth-form__checkbox">
+                        <input type="checkbox" id="terms" required>
+                        <label for="terms">Acepto los términos y condiciones</label>
+                    </div>
+
+                    <!-- Botón con navegación por <form action> según reglas SPEC -->
+                    <button type="submit" class="btn btn--outline btn--block auth-form__submit">Registrarme</button>
+                </form>
+
+                <div class="auth-card__footer">
+                    <p>¿Ya tienes cuenta? <a href="login.html" class="link-primary">Iniciar sesión</a></p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer simple -->
+    <footer class="footer-auth">
+        <div class="footer-auth__container">
+            <p>StackLibris · Registro de escritorio</p>
+            <div class="footer-auth__links">
+                <a href="#">Privacidad</a>
+                <a href="#">Términos</a>
+                <a href="#">Soporte</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

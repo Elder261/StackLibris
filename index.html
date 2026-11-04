@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StackLibris - Apuntes que ayudan a entender</title>
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Estilos principales -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Cabecera / Navbar -->
+    <header class="navbar">
+        <div class="navbar__container">
+            <a href="index.html" class="navbar__logo">
+                <span class="navbar__logo-icon">📚</span>
+                <span class="navbar__logo-text">StackLibris</span>
+            </a>
+            
+            <nav class="navbar__nav">
+                <a href="pages/estudiante/explorar.html" class="navbar__link">Explorar quizzes</a>
+                <a href="pages/creador/subir-apunte.html" class="navbar__link">Creador</a>
+                <a href="pages/creador/canjear-puntos.html" class="navbar__link">Canjear Puntos</a>
+            </nav>
+
+            <div class="navbar__actions">
+                <a href="pages/auth/login.html" class="btn btn--text">Iniciar sesión</a>
+                <a href="pages/auth/signup.html" class="btn btn--primary">Regístrate</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero__container">
+                <div class="hero__content">
+                    <span class="hero__badge">NUEVO MÉTODO DE ESTUDIO UNIVERSITARIO</span>
+                    <h1 class="hero__title">Apuntes que ayudan a entender. Preguntas que ayudan a avanzar.</h1>
+                    <p class="hero__description">Descubre material creado por estudiantes, comparte lo que sabes y pon a prueba tus conocimientos con quizzes de la comunidad.</p>
+                    <div class="hero__buttons">
+                        <a href="pages/estudiante/explorar.html" class="btn btn--primary">Ver quizzes</a>
+                        <a href="pages/creador/subir-apunte.html" class="btn btn--outline">Cargar apuntes</a>
+                    </div>
+                </div>
+                <div class="hero__graphic">
+                    <!-- Representación del Mockup visual de la IA -->
+                    <div class="mockup-card">
+                        <div class="mockup-card__header">
+                            <span class="mockup-card__dot"></span>
+                            <span class="mockup-card__dot"></span>
+                            <span class="mockup-card__dot"></span>
+                        </div>
+                        <div class="mockup-card__body">
+                            <h3 class="mockup-card__title">Generando material interactivo...</h3>
+                            <div class="mockup-card__skeleton">
+                                <div class="mockup-card__line"></div>
+                                <div class="mockup-card__blocks">
+                                    <div class="mockup-card__block"></div>
+                                    <div class="mockup-card__block"></div>
+                                </div>
+                                <div class="mockup-card__line mockup-card__line--short"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Buscador y Categorías -->
+        <section class="explore bg-neutral">
+            <div class="explore__container">
+                <div class="search-bar">
+                    <span class="search-bar__icon">🔍</span>
+                    <input type="text" class="search-bar__input" placeholder="Busca por asignatura, tema o examen...">
+                    <button class="btn btn--primary search-bar__btn">Buscar quizzes</button>
+                </div>
+
+                <div class="explore__grid-layout">
+                    <div class="explore__text">
+                        <span class="section-subtitle">EXPLORA POR TEMA</span>
+                        <h2 class="section-title">Encuentra un punto de partida</h2>
+                        <p class="section-description">Busca en un catálogo de temarios universitarios organizados por facultad.</p>
+                    </div>
+                    <div class="categories-grid">
+                        <a href="pages/estudiante/explorar.html" class="category-card"><span class="category-card__icon">📐</span> Matemáticas</a>
+                        <a href="pages/estudiante/explorar.html" class="category-card"><span class="category-card__icon">🧪</span> Ciencias</a>
+                        <a href="pages/estudiante/explorar.html" class="category-card"><span class="category-card__icon">📜</span> Historia</a>
+                        <a href="pages/estudiante/explorar.html" class="category-card"><span class="category-card__icon">🎨</span> Arte</a>
+                        <a href="pages/estudiante/explorar.html" class="category-card"><span class="category-card__icon">📚</span> Literatura</a>
+                        <a href="pages/estudiante/explorar.html" class="category-card"><span class="category-card__icon">🏛️</span> Arquitectura</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Cómo funciona -->
+        <section class="how-it-works">
+            <div class="how-it-works__container">
+                <span class="section-subtitle">TRES PASOS</span>
+                <h2 class="section-title">Una comunidad que aprende en voz alta</h2>
+                <p class="section-description">Con StackLibris los apuntes no se quedan guardados en el drive.</p>
+                
+                <div class="steps-grid">
+                    <div class="step-item">
+                        <div class="step-item__number">01</div>
+                        <h3 class="step-item__title">Comparte</h3>
+                        <p class="step-item__desc">Sube tus PDFs, apuntes y resúmenes de manera sencilla.</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-item__number">02</div>
+                        <h3 class="step-item__title">Descubre</h3>
+                        <p class="step-item__desc">Encuentra temas clave y validaciones de contenido al instante.</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-item__number">03</div>
+                        <h3 class="step-item__title">Practica</h3>
+                        <p class="step-item__desc">Crea cuestionarios a partir de tus notas y prepárate mejor.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Material listo -->
+        <section class="materials bg-neutral">
+            <div class="materials__container">
+                <div class="materials__header">
+                    <div>
+                        <span class="section-subtitle">NUEVO MATERIAL</span>
+                        <h2 class="section-title">Material listo para estudiar</h2>
+                        <p class="section-description">Los apuntes más valorados por la comunidad de estudiantes.</p>
+                    </div>
+                    <a href="pages/estudiante/explorar.html" class="btn btn--outline">Ver todos los quizzes</a>
+                </div>
+
+                <div class="quiz-grid">
+                    <!-- Tarjeta 1 -->
+                    <div class="quiz-card">
+                        <div class="quiz-card__cover"></div>
+                        <div class="quiz-card__body">
+                            <span class="quiz-card__tag">CÁLCULO Y ESTADÍSTICA</span>
+                            <h3 class="quiz-card__title">Límites y derivadas - guía práctica</h3>
+                            <div class="quiz-card__footer">
+                                <span class="quiz-card__author">Por Alex Rivera</span>
+                                <span class="quiz-card__rating">⭐ 4.8</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Tarjeta 2 -->
+                    <div class="quiz-card">
+                        <div class="quiz-card__cover"></div>
+                        <div class="quiz-card__body">
+                            <span class="quiz-card__tag">FÍSICA DE CUERPOS SÓLIDOS</span>
+                            <h3 class="quiz-card__title">Mapa conceptual y preguntas clave</h3>
+                            <div class="quiz-card__footer">
+                                <span class="quiz-card__author">Por Ninoska Ordema</span>
+                                <span class="quiz-card__rating">⭐ 5.0</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Tarjeta 3 -->
+                    <div class="quiz-card">
+                        <div class="quiz-card__cover"></div>
+                        <div class="quiz-card__body">
+                            <span class="quiz-card__tag">HISTORIA DEL ARTE CLÁSICO</span>
+                            <h3 class="quiz-card__title">Europa 1914-1945 en una línea de tiempo</h3>
+                            <div class="quiz-card__footer">
+                                <span class="quiz-card__author">Por Sonia Garay</span>
+                                <span class="quiz-card__rating">⭐ 4.5</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Final Oscuro -->
+        <section class="cta-banner">
+            <div class="cta-banner__container">
+                <span class="cta-banner__subtitle">NO PIERDAS TUS APUNTES</span>
+                <h2 class="cta-banner__title">Lo que aprendiste hoy puede ayudar a alguien mañana.</h2>
+                <p class="cta-banner__desc">Comienza a explorar materiales recomendados o sube tu contenido para generar recursos de estudio interactivos.</p>
+                <div class="cta-banner__buttons">
+                    <a href="pages/creador/subir-apunte.html" class="btn btn--white">Subir apunte rápido</a>
+                    <a href="pages/estudiante/explorar.html" class="btn btn--primary">Explorar quizzes</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__brand">
+                <a href="index.html" class="navbar__logo">
+                    <span class="navbar__logo-icon">📚</span>
+                    <span class="navbar__logo-text">StackLibris</span>
+                </a>
+                <p class="footer__desc">Tu conocimiento, organizado y listo para compartir con tu facultad.</p>
+            </div>
+            <div class="footer__links">
+                <div class="footer__column">
+                    <h4>Apuntes</h4>
+                    <a href="#">Buscar material</a>
+                    <a href="#">Quizzes populares</a>
+                </div>
+                <div class="footer__column">
+                    <h4>Redes</h4>
+                    <a href="#">Instagram</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">LinkedIn</a>
+                </div>
+                <div class="footer__column">
+                    <h4>Legal</h4>
+                    <a href="#">Términos y condiciones</a>
+                    <a href="#">Privacidad</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>&copy; 2026 StackLibris. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+</html>
