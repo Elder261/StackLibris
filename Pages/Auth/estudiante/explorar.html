@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar quizzes - StackLibris</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="../../css/styles.css">
+</head>
+<body class="bg-neutral">
+
+    <div class="app-layout">
+
+        <!-- ===== SIDEBAR (se repite en todas las pantallas internas) ===== -->
+        <aside class="sidebar">
+            <a href="inicio.html" class="sidebar__logo">
+                <img src="../../img/Hero Media.png" alt="Logo StackLibris" width="28">
+                <span>StackLibris</span>
+            </a>
+
+            <nav class="sidebar__nav" aria-label="Mi espacio">
+                <p class="sidebar__label">Mi espacio</p>
+                <a href="inicio.html" class="sidebar__link">
+                    <svg class="sidebar__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>
+                    Inicio
+                </a>
+                <a href="../creador/mis-quizzes.html" class="sidebar__link sidebar__link--active">
+                    <svg class="sidebar__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4v16M8 4v16M12 4l5 16M16 4l5 16"/></svg>
+                    Mis Quizzes
+                </a>
+                <a href="../creador/subir-apunte.html" class="sidebar__link">
+                    <svg class="sidebar__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>
+                    Crear Quiz
+                </a>
+                <a href="../creador/canjear-puntos.html" class="sidebar__link">
+                    <svg class="sidebar__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="8" width="18" height="13" rx="1"/><path d="M3 12h18M12 8v13M12 8c-2-4-6-4-6-1s6 1 6 1zm0 0c2-4 6-4 6-1s-6 1-6 1z"/></svg>
+                    Canjear Puntos
+                </a>
+                <a href="#" class="sidebar__link">
+                    <svg class="sidebar__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3v18h18M7 15l4-4 3 3 6-6"/></svg>
+                    Mi Progreso
+                </a>
+                <a href="../creador/premium.html" class="sidebar__link">
+                    <svg class="sidebar__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8l4 4 5-6 5 6 4-4-2 11H5z"/></svg>
+                    Premium
+                </a>
+            </nav>
+
+            <div class="sidebar__promo">
+                <p class="sidebar__promo-title">✦ Aprender tiene premio</p>
+                <p class="sidebar__promo-text">Crea, practica y comparte. Cada paso suma puntos.</p>
+                <a href="../creador/canjear-puntos.html" class="sidebar__promo-link">Descubre tus recompensas →</a>
+            </div>
+
+            <div class="sidebar__user">
+                <span class="sidebar__avatar">LM</span>
+                <div>
+                    <p class="sidebar__user-name">Lucía Martínez</p>
+                    <p class="sidebar__user-role">Estudiante</p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- ===== CONTENIDO PRINCIPAL ===== -->
+        <div class="app-layout__content">
+
+            <header class="topbar">
+                <nav class="topbar__breadcrumb" aria-label="Ruta">
+                    <span>Mi espacio</span> <span>›</span> <strong>Buscar Quizzes</strong>
+                </nav>
+                <div class="topbar__actions">
+                    <a href="../creador/premium.html" class="topbar__premium">☆ Premium</a>
+                    <a href="../creador/canjear-puntos.html" class="topbar__points">
+                        <svg class="topbar__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="9" r="6"/><circle cx="15" cy="15" r="6"/></svg>
+                        1.250 puntos
+                    </a>
+                    <a href="#" class="topbar__bell" aria-label="Notificaciones">
+                        <svg class="topbar__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4zM10 20a2 2 0 0 0 4 0"/></svg>
+                    </a>
+                </div>
+            </header>
+
+            <main class="app-main">
+
+                <!-- Buscador -->
+                <form class="search-row" action="explorar.html" role="search">
+                    <label for="buscar" class="search-row__label">Buscar</label>
+                    <input type="search" id="buscar" name="q" class="field__input search-row__input" placeholder="Buscar por curso o tema...">
+                </form>
+
+                <section class="page-header">
+                    <h1 class="page-header__title">Resultados de búsqueda</h1>
+                </section>
+
+                <!-- Filtros -->
+                <nav class="chips" aria-label="Filtros">
+                    <a href="explorar.html" class="chip chip--active">Todos</a>
+                    <a href="#" class="chip">Matemáticas</a>
+                    <a href="#" class="chip">Ciencias</a>
+                    <a href="#" class="chip">5 estrellas</a>
+                    <a href="favoritos.html" class="chip">♥ Favoritos</a>
+                </nav>
+
+                <div class="explore-layout">
+                    <!-- Resultados -->
+                    <section class="results-grid" aria-label="Quizzes encontrados">
+                    <article class="practice-card">
+                        <div class="practice-card__head">
+                            <h2 class="practice-card__title">Cálculo I - Derivadas</h2>
+                        </div>
+                        <p class="practice-card__meta">Por Alex Rivera <span class="practice-card__rating">★ 4.8 estrellas</span></p>
+                        <div class="practice-card__tags">
+                            <span class="tag">20 preguntas</span>
+                            <span class="tag tag--warning">Difícil</span>
+                        </div>
+                        <p class="practice-card__updated">Actualizado hace 3 días</p>
+                        <a href="quiz.html" class="btn btn--primary btn--block practice-card__btn">Comenzar quiz</a>
+                    </article>
+
+                    <article class="practice-card">
+                        <div class="practice-card__head">
+                            <h2 class="practice-card__title">Física Básica</h2>
+                        </div>
+                        <p class="practice-card__meta">Por Nico Rojas <span class="practice-card__rating">★ 4.9 estrellas</span></p>
+                        <div class="practice-card__tags">
+                            <span class="tag">10 preguntas</span>
+                            <span class="tag tag--warning">Difícil</span>
+                        </div>
+                        <p class="practice-card__updated">Actualizado hace 3 días</p>
+                        <a href="quiz.html" class="btn btn--dark btn--block practice-card__btn">Comenzar quiz</a>
+                    </article>
+
+                    <article class="practice-card">
+                        <div class="practice-card__head">
+                            <h2 class="practice-card__title">Anatomía</h2>
+                        </div>
+                        <p class="practice-card__meta">Por Alex Rivera <span class="practice-card__rating">★ 4.8 estrellas</span></p>
+                        <div class="practice-card__tags">
+                            <span class="tag">20 preguntas</span>
+                            <span class="tag tag--success">Ciencias</span>
+                        </div>
+                        <p class="practice-card__updated">Actualizado hace 3 días</p>
+                        <a href="quiz.html" class="btn btn--primary btn--block practice-card__btn">Comenzar quiz</a>
+                    </article>
+
+                    <article class="practice-card">
+                        <span class="practice-card__badge">Completado</span>
+                        <div class="practice-card__head">
+                            <h2 class="practice-card__title">Historia del Arte</h2>
+                        </div>
+                        <p class="practice-card__meta">Por Historia Arte <span class="practice-card__rating">★ 5 estrellas</span></p>
+                        <div class="practice-card__tags">
+                            <span class="tag">20 preguntas</span>
+                            <span class="tag tag--warning">Difícil</span>
+                        </div>
+                        <p class="practice-card__updated">Actualizado hace 3 días</p>
+                        <a href="quiz.html" class="btn btn--primary btn--block practice-card__btn">Comenzar quiz</a>
+                    </article>
+
+                    <article class="practice-card">
+                        <span class="practice-card__badge">Completado</span>
+                        <div class="practice-card__head">
+                            <h2 class="practice-card__title">Programación</h2>
+                        </div>
+                        <p class="practice-card__meta">Por Alex Piovena <span class="practice-card__rating">★ 4.8 estrellas</span></p>
+                        <div class="practice-card__tags">
+                            <span class="tag">15 preguntas</span>
+                            <span class="tag tag--success">Ciencias</span>
+                        </div>
+                        <p class="practice-card__updated">Actualizado hace 3 días</p>
+                        <a href="quiz.html" class="btn btn--primary btn--block practice-card__btn">Comenzar quiz</a>
+                    </article>
+
+                    <article class="practice-card">
+                        <span class="practice-card__badge">Completado</span>
+                        <div class="practice-card__head">
+                            <h2 class="practice-card__title">Química</h2>
+                        </div>
+                        <p class="practice-card__meta">Por Química Ana <span class="practice-card__rating">★ 4.8 estrellas</span></p>
+                        <div class="practice-card__tags">
+                            <span class="tag">12 preguntas</span>
+                            <span class="tag tag--success">Ciencias</span>
+                        </div>
+                        <p class="practice-card__updated">Actualizado hace 3 días</p>
+                        <span class="btn btn--disabled btn--block practice-card__btn" aria-disabled="true">Comenzar quiz</span>
+                    </article>
+                    </section>
+
+                    <!-- Vista previa del quiz seleccionado -->
+                    <aside class="quiz-preview" aria-label="Vista previa del quiz">
+                        <h2 class="quiz-preview__title">Cálculo I - Derivadas</h2>
+                        <div class="quiz-preview__author">
+                            <span class="sidebar__avatar">AR</span>
+                            <p>Alex Rivera <small>Profesor Asociado</small></p>
+                        </div>
+                        <p class="quiz-preview__desc">Abarca temas clave como límites, derivadas y aplicaciones académicas, divididos en preguntas de opción múltiple con optimización. Perfecto para repasar tus conocimientos antes del parcial.</p>
+                        <div class="quiz-preview__tags">
+                            <span class="tag">Derivadas</span>
+                            <span class="tag">Optimización</span>
+                            <span class="tag tag--success">Ciencias</span>
+                        </div>
+                        <p class="quiz-preview__desc">20 preguntas</p>
+                        <a href="quiz.html" class="btn btn--primary btn--block btn--pill">Iniciar práctica</a>
+                    </aside>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

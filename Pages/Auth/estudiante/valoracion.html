@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valoración final - StackLibris</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="../../css/styles.css">
+</head>
+<body class="bg-neutral">
+
+    <div class="app-layout">
+
+        <!-- ===== SIDEBAR (se repite en todas las pantallas internas) ===== -->
+        <aside class="sidebar">
+            <a href="inicio.html" class="sidebar__logo">
+                <img src="../../img/Hero Media.png" alt="Logo StackLibris" width="28">
+                <span>StackLibris</span>
+            </a>
+
+            <nav class="sidebar__nav" aria-label="Mi espacio">
+                <p class="sidebar__label">Mi espacio</p>
+                <a href="inicio.html" class="sidebar__link">
+                    <svg class="sidebar__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>
+                    Inicio
+                </a>
+                <a href="../creador/mis-quizzes.html" class="sidebar__link sidebar__link--active">
+                    <svg class="sidebar__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4v16M8 4v16M12 4l5 16M16 4l5 16"/></svg>
+                    Mis Quizzes
+                </a>
+                <a href="../creador/subir-apunte.html" class="sidebar__link">
+                    <svg class="sidebar__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>
+                    Crear Quiz
+                </a>
+                <a href="../creador/canjear-puntos.html" class="sidebar__link">
+                    <svg class="sidebar__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="8" width="18" height="13" rx="1"/><path d="M3 12h18M12 8v13M12 8c-2-4-6-4-6-1s6 1 6 1zm0 0c2-4 6-4 6-1s-6 1-6 1z"/></svg>
+                    Canjear Puntos
+                </a>
+                <a href="#" class="sidebar__link">
+                    <svg class="sidebar__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3v18h18M7 15l4-4 3 3 6-6"/></svg>
+                    Mi Progreso
+                </a>
+                <a href="../creador/premium.html" class="sidebar__link">
+                    <svg class="sidebar__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8l4 4 5-6 5 6 4-4-2 11H5z"/></svg>
+                    Premium
+                </a>
+            </nav>
+
+            <div class="sidebar__promo">
+                <p class="sidebar__promo-title">✦ Aprender tiene premio</p>
+                <p class="sidebar__promo-text">Crea, practica y comparte. Cada paso suma puntos.</p>
+                <a href="../creador/canjear-puntos.html" class="sidebar__promo-link">Descubre tus recompensas →</a>
+            </div>
+
+            <div class="sidebar__user">
+                <span class="sidebar__avatar">LM</span>
+                <div>
+                    <p class="sidebar__user-name">Lucía Martínez</p>
+                    <p class="sidebar__user-role">Estudiante</p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- ===== CONTENIDO PRINCIPAL ===== -->
+        <div class="app-layout__content">
+
+            <header class="topbar">
+                <nav class="topbar__breadcrumb" aria-label="Ruta">
+                    <span>Mi espacio</span> <span>›</span> <span>Mis Quizzes</span> <span>›</span> <span>Cálculo I - Derivadas</span> <span>›</span> <strong>Valoración</strong>
+                </nav>
+                <div class="topbar__actions">
+                    <a href="../creador/premium.html" class="topbar__premium">☆ Premium</a>
+                    <a href="../creador/canjear-puntos.html" class="topbar__points">
+                        <svg class="topbar__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="9" r="6"/><circle cx="15" cy="15" r="6"/></svg>
+                        1.250 puntos
+                    </a>
+                    <a href="#" class="topbar__bell" aria-label="Notificaciones">
+                        <svg class="topbar__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4zM10 20a2 2 0 0 0 4 0"/></svg>
+                    </a>
+                </div>
+            </header>
+
+            <main class="app-main">
+
+                <section class="page-header">
+                    <h1 class="page-header__title">Cálculo I - Derivadas: Valoración Final</h1>
+                    <p class="page-header__desc">Quiz completado</p>
+                </section>
+
+                <section class="panel">
+                    <div class="result-summary">
+                        <h2 class="result-summary__title">¡Felicitaciones, has completado el quiz!</h2>
+                        <p class="result-summary__score">Puntaje final: 18 / 20 <small>90% de respuestas correctas</small></p>
+                    </div>
+
+                    <form action="inicio.html">
+                        <fieldset>
+                            <legend class="result-summary__title">Ayúdanos a mejorar: ¿Qué te pareció este material?</legend>
+                            <div class="rating-input">
+                                <input type="radio" id="estrella-5" name="valoracion" value="5" class="rating-input__radio">
+                                <label for="estrella-5" class="rating-input__star" title="5 estrellas">★</label>
+                                <input type="radio" id="estrella-4" name="valoracion" value="4" class="rating-input__radio" checked>
+                                <label for="estrella-4" class="rating-input__star" title="4 estrellas">★</label>
+                                <input type="radio" id="estrella-3" name="valoracion" value="3" class="rating-input__radio">
+                                <label for="estrella-3" class="rating-input__star" title="3 estrellas">★</label>
+                                <input type="radio" id="estrella-2" name="valoracion" value="2" class="rating-input__radio">
+                                <label for="estrella-2" class="rating-input__star" title="2 estrellas">★</label>
+                                <input type="radio" id="estrella-1" name="valoracion" value="1" class="rating-input__radio">
+                                <label for="estrella-1" class="rating-input__star" title="1 estrellas">★</label>
+                            </div>
+                            <p class="field__hint">Valoración del material (1 a 5 estrellas). Tu opinión ayuda a tus compañeros.</p>
+                        </fieldset>
+
+                        <div class="field" style="margin-top: var(--space-lg);">
+                            <label for="comentario" class="field__label">Comentarios adicionales</label>
+                            <textarea id="comentario" name="comentario" class="field__textarea" maxlength="250" placeholder="Comentarios adicionales (ej. claridad, errores, utilidad)..."></textarea>
+                            <p class="field__hint">Máximo 250 caracteres</p>
+                        </div>
+
+                        <div class="card-footer">
+                            <a href="#" class="report-link">Reportar error en la pregunta</a>
+                            <button type="submit" class="btn btn--primary btn--pill">Enviar Valoración y Finalizar</button>
+                        </div>
+                    </form>
+                </section>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
