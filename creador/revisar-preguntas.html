@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Revisar preguntas - StackLibris</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="../../CSS/styles.css">
+</head>
+<body class="bg-neutral">
+
+    <div class="app-layout">
+
+        <!-- ===== SIDEBAR (se repite en todas las pantallas internas) ===== -->
+        <aside class="sidebar">
+            <a href="../estudiante/inicio.html" class="sidebar__logo">
+                <img src="../../img/Hero Media.png" alt="Logo StackLibris" width="28">
+                <span>StackLibris</span>
+            </a>
+
+            <nav class="sidebar__nav" aria-label="Mi espacio">
+                <p class="sidebar__label">Mi espacio</p>
+                <a href="../estudiante/inicio.html" class="sidebar__link">
+                    <svg class="sidebar__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>
+                    Inicio
+                </a>
+                <a href="mis-quizzes.html" class="sidebar__link">
+                    <svg class="sidebar__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4v16M8 4v16M12 4l5 16M16 4l5 16"/></svg>
+                    Mis Quizzes
+                </a>
+                <a href="subir-apunte.html" class="sidebar__link sidebar__link--active">
+                    <svg class="sidebar__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>
+                    Crear Quiz
+                </a>
+                <a href="canjear-puntos.html" class="sidebar__link">
+                    <svg class="sidebar__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="8" width="18" height="13" rx="1"/><path d="M3 12h18M12 8v13M12 8c-2-4-6-4-6-1s6 1 6 1zm0 0c2-4 6-4 6-1s-6 1-6 1z"/></svg>
+                    Canjear Puntos
+                </a>
+                <a href="#" class="sidebar__link">
+                    <svg class="sidebar__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3v18h18M7 15l4-4 3 3 6-6"/></svg>
+                    Mi Progreso
+                </a>
+                <a href="premium.html" class="sidebar__link">
+                    <svg class="sidebar__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8l4 4 5-6 5 6 4-4-2 11H5z"/></svg>
+                    Premium
+                </a>
+            </nav>
+
+            <div class="sidebar__promo">
+                <p class="sidebar__promo-title">✦ Aprender tiene premio</p>
+                <p class="sidebar__promo-text">Crea, practica y comparte. Cada paso suma puntos.</p>
+                <a href="canjear-puntos.html" class="sidebar__promo-link">Descubre tus recompensas →</a>
+            </div>
+
+            <div class="sidebar__user">
+                <span class="sidebar__avatar">LM</span>
+                <div>
+                    <p class="sidebar__user-name">Lucía Martínez</p>
+                    <p class="sidebar__user-role">Estudiante</p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- ===== CONTENIDO PRINCIPAL ===== -->
+        <div class="app-layout__content">
+
+            <header class="topbar">
+                <nav class="topbar__breadcrumb" aria-label="Ruta">
+                    <span>Mi espacio</span> <span>›</span> <strong>Revisar Preguntas</strong>
+                </nav>
+                <div class="topbar__actions">
+                    <a href="canjear-puntos.html" class="topbar__points">
+                        <svg class="topbar__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="9" r="6"/><circle cx="15" cy="15" r="6"/></svg>
+                        1.250 puntos
+                    </a>
+                    <a href="#" class="topbar__bell" aria-label="Notificaciones">
+                        <svg class="topbar__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4zM10 20a2 2 0 0 0 4 0"/></svg>
+                    </a>
+                </div>
+            </header>
+
+            <main class="app-main">
+
+                <section class="page-header">
+                    <h1 class="page-header__title">Revisar Preguntas</h1>
+                    <p class="page-header__desc">Verifica y edita las preguntas antes de publicar tu quiz.</p>
+                </section>
+
+                <ol class="stepper" aria-label="Pasos para crear un quiz">
+                    <li class="stepper__step stepper__step--done"><span class="stepper__num">✓</span> Subir apunte</li>
+                    <li class="stepper__step stepper__step--current" aria-current="step"><span class="stepper__num">2</span> Revisar preguntas</li>
+                    <li class="stepper__step"><span class="stepper__num">3</span> Categorizar quiz</li>
+                </ol>
+
+                <div class="review-bar">
+                    <span>Cálculo I / Límites, derivadas e integrales</span>
+                    <span class="tag tag--primary">3 preguntas generadas</span>
+                </div>
+
+                <form action="categorizar-quiz.html">
+                    <article class="question-card">
+                        <div class="question-card__head">
+                            <span class="question-card__num">01</span>
+                            <h2 class="question-card__title">¿Cuál es la derivada de f(x) = x³? <small>Derivadas</small></h2>
+                            <div class="question-card__tools">
+                                <button type="button" class="icon-btn" aria-label="Editar pregunta 01"><svg class="topbar__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16zM14 6l4 4"/></svg></button>
+                                <button type="button" class="icon-btn icon-btn--danger" aria-label="Eliminar pregunta 01"><svg class="topbar__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M9 7V4h6v3M6 7l1 13h10l1-13"/></svg></button>
+                            </div>
+                        </div>
+                        <fieldset class="question-card__options">
+                            <legend class="sr-only">Marca la respuesta correcta</legend>
+                            <label class="answer-option">
+                                <input type="radio" name="correcta-01" value="0" checked>
+                                3x²
+                                <span class="answer-option__correct-label">Correcta</span>
+                            </label>
+                            <label class="answer-option">
+                                <input type="radio" name="correcta-01" value="1">
+                                x²
+                                <span class="answer-option__correct-label">Correcta</span>
+                            </label>
+                            <label class="answer-option">
+                                <input type="radio" name="correcta-01" value="2">
+                                3x
+                                <span class="answer-option__correct-label">Correcta</span>
+                            </label>
+                            <label class="answer-option">
+                                <input type="radio" name="correcta-01" value="3">
+                                x⁴ / 4
+                                <span class="answer-option__correct-label">Correcta</span>
+                            </label>
+                        </fieldset>
+                    </article>
+
+                    <article class="question-card">
+                        <div class="question-card__head">
+                            <span class="question-card__num">02</span>
+                            <h2 class="question-card__title">¿Cuál es el valor de lím (x → 0) sen(x) / x? <small>Límites · x en radianes</small></h2>
+                            <div class="question-card__tools">
+                                <button type="button" class="icon-btn" aria-label="Editar pregunta 02"><svg class="topbar__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16zM14 6l4 4"/></svg></button>
+                                <button type="button" class="icon-btn icon-btn--danger" aria-label="Eliminar pregunta 02"><svg class="topbar__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M9 7V4h6v3M6 7l1 13h10l1-13"/></svg></button>
+                            </div>
+                        </div>
+                        <fieldset class="question-card__options">
+                            <legend class="sr-only">Marca la respuesta correcta</legend>
+                            <label class="answer-option">
+                                <input type="radio" name="correcta-02" value="0">
+                                0
+                                <span class="answer-option__correct-label">Correcta</span>
+                            </label>
+                            <label class="answer-option">
+                                <input type="radio" name="correcta-02" value="1" checked>
+                                1
+                                <span class="answer-option__correct-label">Correcta</span>
+                            </label>
+                            <label class="answer-option">
+                                <input type="radio" name="correcta-02" value="2">
+                                ∞
+                                <span class="answer-option__correct-label">Correcta</span>
+                            </label>
+                            <label class="answer-option">
+                                <input type="radio" name="correcta-02" value="3">
+                                No existe
+                                <span class="answer-option__correct-label">Correcta</span>
+                            </label>
+                        </fieldset>
+                    </article>
+
+                    <article class="question-card">
+                        <div class="question-card__head">
+                            <span class="question-card__num">03</span>
+                            <h2 class="question-card__title">¿Cuánto vale la integral definida ∫₀¹ 2x dx? <small>Integrales</small></h2>
+                            <div class="question-card__tools">
+                                <button type="button" class="icon-btn" aria-label="Editar pregunta 03"><svg class="topbar__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16zM14 6l4 4"/></svg></button>
+                                <button type="button" class="icon-btn icon-btn--danger" aria-label="Eliminar pregunta 03"><svg class="topbar__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M9 7V4h6v3M6 7l1 13h10l1-13"/></svg></button>
+                            </div>
+                        </div>
+                        <fieldset class="question-card__options">
+                            <legend class="sr-only">Marca la respuesta correcta</legend>
+                            <label class="answer-option">
+                                <input type="radio" name="correcta-03" value="0">
+                                0
+                                <span class="answer-option__correct-label">Correcta</span>
+                            </label>
+                            <label class="answer-option">
+                                <input type="radio" name="correcta-03" value="1">
+                                2
+                                <span class="answer-option__correct-label">Correcta</span>
+                            </label>
+                            <label class="answer-option">
+                                <input type="radio" name="correcta-03" value="2" checked>
+                                1
+                                <span class="answer-option__correct-label">Correcta</span>
+                            </label>
+                            <label class="answer-option">
+                                <input type="radio" name="correcta-03" value="3">
+                                1/2
+                                <span class="answer-option__correct-label">Correcta</span>
+                            </label>
+                        </fieldset>
+                    </article>
+
+                    <button type="submit" class="btn btn--primary btn--block btn--pill">Publicar Quiz</button>
+                </form>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

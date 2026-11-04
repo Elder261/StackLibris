@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - StackLibris</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="../../CSS/styles.css">
+</head>
+<body class="bg-neutral">
+
+    <div class="app-layout">
+
+        <!-- ===== SIDEBAR (se repite en todas las pantallas internas) ===== -->
+        <aside class="sidebar">
+            <a href="inicio.html" class="sidebar__logo">
+                <img src="../../img/Hero Media.png" alt="Logo StackLibris" width="28">
+                <span>StackLibris</span>
+            </a>
+
+            <nav class="sidebar__nav" aria-label="Mi espacio">
+                <p class="sidebar__label">Mi espacio</p>
+                <a href="inicio.html" class="sidebar__link sidebar__link--active">
+                    <svg class="sidebar__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>
+                    Inicio
+                </a>
+                <a href="../creador/mis-quizzes.html" class="sidebar__link">
+                    <svg class="sidebar__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4v16M8 4v16M12 4l5 16M16 4l5 16"/></svg>
+                    Mis Quizzes
+                </a>
+                <a href="../creador/subir-apunte.html" class="sidebar__link">
+                    <svg class="sidebar__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>
+                    Crear Quiz
+                </a>
+                <a href="../creador/canjear-puntos.html" class="sidebar__link">
+                    <svg class="sidebar__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="8" width="18" height="13" rx="1"/><path d="M3 12h18M12 8v13M12 8c-2-4-6-4-6-1s6 1 6 1zm0 0c2-4 6-4 6-1s-6 1-6 1z"/></svg>
+                    Canjear Puntos
+                </a>
+                <a href="#" class="sidebar__link">
+                    <svg class="sidebar__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3v18h18M7 15l4-4 3 3 6-6"/></svg>
+                    Mi Progreso
+                </a>
+                <a href="../creador/premium.html" class="sidebar__link">
+                    <svg class="sidebar__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8l4 4 5-6 5 6 4-4-2 11H5z"/></svg>
+                    Premium
+                </a>
+            </nav>
+
+            <div class="sidebar__promo">
+                <p class="sidebar__promo-title">✦ Aprender tiene premio</p>
+                <p class="sidebar__promo-text">Crea, practica y comparte. Cada paso suma puntos.</p>
+                <a href="../creador/canjear-puntos.html" class="sidebar__promo-link">Descubre tus recompensas →</a>
+            </div>
+
+            <div class="sidebar__user">
+                <span class="sidebar__avatar">LM</span>
+                <div>
+                    <p class="sidebar__user-name">Lucía Martínez</p>
+                    <p class="sidebar__user-role">Estudiante</p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- ===== CONTENIDO PRINCIPAL ===== -->
+        <div class="app-layout__content">
+
+            <header class="topbar">
+                <nav class="topbar__breadcrumb" aria-label="Ruta">
+                    <span>Mi espacio</span> <span>›</span> <strong>Inicio</strong>
+                </nav>
+                <a href="#" class="topbar__help">ⓘ ¿Necesitas ayuda?</a>
+            </header>
+
+            <main class="app-main">
+
+                <!-- Saludo -->
+                <section class="page-header">
+                    <h1 class="page-header__title">¡Hola, Lucía!</h1>
+                    <p class="page-header__desc">Un buen momento para aprender algo nuevo. ¿Qué quieres practicar hoy?</p>
+                </section>
+
+                <!-- Buscador (lleva a Resultados de búsqueda) -->
+                <section class="search-hero">
+                    <div>
+                        <h2 class="search-hero__title">Tu próxima práctica empieza aquí</h2>
+                        <p class="search-hero__desc">Encuentra un quiz y pon a prueba lo que sabes.</p>
+                    </div>
+                    <form class="search-hero__form" action="explorar.html">
+                        <input type="search" name="q" class="search-hero__input" placeholder="Buscar por curso o tema..." aria-label="Buscar por curso o tema">
+                        <button type="submit" class="btn btn--primary search-hero__btn">Buscar</button>
+                    </form>
+                </section>
+
+                <!-- Accesos rápidos -->
+                <section class="quick-links" aria-label="Accesos rápidos">
+                    <a href="../creador/mis-quizzes.html" class="quick-links__item">
+                        <span class="quick-links__icon">▤</span>
+                        <span><strong>Mis Quizzes</strong><small>Organiza tu biblioteca</small></span>
+                        <span class="quick-links__arrow">↗</span>
+                    </a>
+                    <a href="../creador/subir-apunte.html" class="quick-links__item">
+                        <span class="quick-links__icon">＋</span>
+                        <span><strong>Crear Quiz</strong><small>Convierte apuntes en práctica</small></span>
+                        <span class="quick-links__arrow">↗</span>
+                    </a>
+                    <a href="#" class="quick-links__item">
+                        <span class="quick-links__icon">↗</span>
+                        <span><strong>Mi Progreso</strong><small>Revisa tu aprendizaje</small></span>
+                        <span class="quick-links__arrow">↗</span>
+                    </a>
+                </section>
+
+                <!-- Recomendados para practicar -->
+                <section class="app-section">
+                    <div class="app-section__head">
+                        <h2 class="app-section__title">Recomendados para practicar <small>Explora un nuevo tema</small></h2>
+                        <a href="explorar.html" class="app-section__link">Explorar quizzes →</a>
+                    </div>
+
+                    <div class="practice-grid">
+                        <article class="practice-card">
+                            <h3 class="practice-card__title">Cálculo I - Derivadas</h3>
+                            <p class="practice-card__meta">Por Alex Rivera <span class="practice-card__rating">★ 4.8 estrellas</span></p>
+                            <div class="practice-card__tags">
+                                <span class="tag">20 preguntas</span>
+                                <span class="tag tag--warning">Difícil</span>
+                            </div>
+                            <p class="practice-card__updated">Actualizado hace 3 días</p>
+                            <a href="quiz.html" class="btn btn--primary btn--block practice-card__btn">Comenzar quiz</a>
+                        </article>
+
+                        <article class="practice-card">
+                            <h3 class="practice-card__title">Física Básica</h3>
+                            <p class="practice-card__meta">Por Nico Rojas <span class="practice-card__rating">★ 4.9 estrellas</span></p>
+                            <div class="practice-card__tags">
+                                <span class="tag">10 preguntas</span>
+                                <span class="tag tag--warning">Difícil</span>
+                            </div>
+                            <p class="practice-card__updated">Actualizado hace 3 días</p>
+                            <a href="quiz.html" class="btn btn--primary btn--block practice-card__btn">Comenzar quiz</a>
+                        </article>
+
+                        <article class="practice-card">
+                            <h3 class="practice-card__title">Anatomía</h3>
+                            <p class="practice-card__meta">Por Alex Rivera <span class="practice-card__rating">★ 4.8 estrellas</span></p>
+                            <div class="practice-card__tags">
+                                <span class="tag">20 preguntas</span>
+                                <span class="tag tag--success">Ciencias</span>
+                            </div>
+                            <p class="practice-card__updated">Actualizado hace 3 días</p>
+                            <a href="quiz.html" class="btn btn--primary btn--block practice-card__btn">Comenzar quiz</a>
+                        </article>
+                    </div>
+                </section>
+
+                <!-- Un repaso siempre suma -->
+                <section class="app-section">
+                    <div class="app-section__head">
+                        <h2 class="app-section__title">Un repaso siempre suma <small>Vuelve a tus quizzes completados</small></h2>
+                        <a href="../creador/mis-quizzes.html" class="app-section__link">Ir a Mis Quizzes →</a>
+                    </div>
+
+                    <div class="review-grid">
+                        <article class="review-card">
+                            <div class="review-card__top">
+                                <span class="review-card__status">✓ Completado</span>
+                                <span class="practice-card__rating">★ 5</span>
+                            </div>
+                            <h3 class="review-card__title">Historia del Arte</h3>
+                            <p class="review-card__meta">Por Historia Arte<br>20 preguntas · Difícil</p>
+                            <a href="quiz.html" class="review-card__link">Volver a practicar <span>→</span></a>
+                        </article>
+
+                        <article class="review-card">
+                            <div class="review-card__top">
+                                <span class="review-card__status">✓ Completado</span>
+                                <span class="practice-card__rating">★ 4.8</span>
+                            </div>
+                            <h3 class="review-card__title">Programación</h3>
+                            <p class="review-card__meta">Por Alex Piovena<br>Ciencias</p>
+                            <a href="quiz.html" class="review-card__link">Volver a practicar <span>→</span></a>
+                        </article>
+
+                        <article class="review-card">
+                            <div class="review-card__top">
+                                <span class="review-card__status">✓ Completado</span>
+                                <span class="practice-card__rating">★ 4.8</span>
+                            </div>
+                            <h3 class="review-card__title">Química</h3>
+                            <p class="review-card__meta">Por Química Ana<br>Ciencias</p>
+                            <a href="quiz.html" class="review-card__link">Volver a practicar <span>→</span></a>
+                        </article>
+
+                        <article class="review-card">
+                            <div class="review-card__top">
+                                <span class="review-card__status">✓ Completado</span>
+                                <span class="practice-card__rating">★ 4.9</span>
+                            </div>
+                            <h3 class="review-card__title">Química Orgánica</h3>
+                            <p class="review-card__meta">Por Dr. Smith<br>Ciencias</p>
+                            <a href="quiz.html" class="review-card__link">Volver a practicar <span>→</span></a>
+                        </article>
+                    </div>
+                </section>
+
+            </main>
+        </div>
+    </div>
+</body>
+</html>

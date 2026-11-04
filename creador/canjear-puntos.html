@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canjear puntos - StackLibris</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="../../CSS/styles.css">
+</head>
+<body class="bg-neutral">
+
+    <div class="app-layout">
+
+        <!-- ===== SIDEBAR (se repite en todas las pantallas internas) ===== -->
+        <aside class="sidebar">
+            <a href="../estudiante/inicio.html" class="sidebar__logo">
+                <img src="../../img/Hero Media.png" alt="Logo StackLibris" width="28">
+                <span>StackLibris</span>
+            </a>
+
+            <nav class="sidebar__nav" aria-label="Mi espacio">
+                <p class="sidebar__label">Mi espacio</p>
+                <a href="../estudiante/inicio.html" class="sidebar__link">
+                    <svg class="sidebar__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>
+                    Inicio
+                </a>
+                <a href="mis-quizzes.html" class="sidebar__link">
+                    <svg class="sidebar__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4v16M8 4v16M12 4l5 16M16 4l5 16"/></svg>
+                    Mis Quizzes
+                </a>
+                <a href="subir-apunte.html" class="sidebar__link">
+                    <svg class="sidebar__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>
+                    Crear Quiz
+                </a>
+                <a href="canjear-puntos.html" class="sidebar__link sidebar__link--active">
+                    <svg class="sidebar__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="8" width="18" height="13" rx="1"/><path d="M3 12h18M12 8v13M12 8c-2-4-6-4-6-1s6 1 6 1zm0 0c2-4 6-4 6-1s-6 1-6 1z"/></svg>
+                    Canjear Puntos
+                </a>
+                <a href="#" class="sidebar__link">
+                    <svg class="sidebar__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3v18h18M7 15l4-4 3 3 6-6"/></svg>
+                    Mi Progreso
+                </a>
+                <a href="premium.html" class="sidebar__link">
+                    <svg class="sidebar__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8l4 4 5-6 5 6 4-4-2 11H5z"/></svg>
+                    Premium
+                </a>
+            </nav>
+
+            <div class="sidebar__promo">
+                <p class="sidebar__promo-title">✦ Aprender tiene premio</p>
+                <p class="sidebar__promo-text">Crea, practica y comparte. Cada paso suma puntos.</p>
+                <a href="canjear-puntos.html" class="sidebar__promo-link">Descubre tus recompensas →</a>
+            </div>
+
+            <div class="sidebar__user">
+                <span class="sidebar__avatar">LM</span>
+                <div>
+                    <p class="sidebar__user-name">Lucía Martínez</p>
+                    <p class="sidebar__user-role">Estudiante</p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- ===== CONTENIDO PRINCIPAL ===== -->
+        <div class="app-layout__content">
+
+            <header class="topbar">
+                <nav class="topbar__breadcrumb" aria-label="Ruta">
+                    <span>Mi espacio</span> <span>›</span> <strong>Canjear Puntos</strong>
+                </nav>
+                <div class="topbar__actions">
+                    <a href="canjear-puntos.html" class="topbar__points">
+                        <svg class="topbar__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="9" r="6"/><circle cx="15" cy="15" r="6"/></svg>
+                        1.250 puntos
+                    </a>
+                    <a href="#" class="topbar__bell" aria-label="Notificaciones">
+                        <svg class="topbar__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4zM10 20a2 2 0 0 0 4 0"/></svg>
+                    </a>
+                </div>
+            </header>
+
+            <main class="app-main">
+
+                <section class="page-header">
+                    <h1 class="page-header__title">Canjear Puntos</h1>
+                    <p class="page-header__desc">Tu esfuerzo se convierte en nuevas oportunidades para aprender.</p>
+                </section>
+
+                <section class="balance" aria-label="Tu saldo">
+                    <div class="balance__main">
+                        <span class="balance__icon" aria-hidden="true">◎</span>
+                        <div>
+                            <p class="balance__label">Tu saldo disponible</p>
+                            <p class="balance__value">1.250 puntos</p>
+                            <p class="balance__extra">+250 puntos ganados esta semana</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h2 class="balance__side-title">Sigue sumando conocimiento</h2>
+                        <p class="balance__side-text">Completa quizzes y comparte tus apuntes para desbloquear más recompensas.</p>
+                        <a href="#" class="balance__link">Cómo ganar puntos →</a>
+                    </div>
+                </section>
+
+                <section class="app-section">
+                    <div class="app-section__head">
+                        <h2 class="app-section__title">Recompensas para ti</h2>
+                        <span class="field__hint">Canje inmediato · Sin fecha de caducidad</span>
+                    </div>
+
+                    <div class="rewards">
+                        <article class="reward">
+                            <div class="reward__cover"><span aria-hidden="true">🗒</span><small>Digital</small></div>
+                            <h3 class="reward__title">Pack de estudio</h3>
+                            <p class="reward__desc">3 plantillas para organizar tus repasos de cálculo.</p>
+                            <p class="reward__cost">◎ 300 puntos</p>
+                            <a href="#" class="btn btn--primary btn--block btn--pill">Canjear</a>
+                            <p class="reward__status">Disponible para ti</p>
+                        </article>
+
+                        <article class="reward">
+                            <div class="reward__cover"><span aria-hidden="true">⏱</span><small>Más popular</small></div>
+                            <h3 class="reward__title">Modo enfoque · 7 días</h3>
+                            <p class="reward__desc">Estudia sin distracciones y sigue tu progreso.</p>
+                            <p class="reward__cost">◎ 800 puntos</p>
+                            <a href="#" class="btn btn--dark btn--block btn--pill">Canjear</a>
+                            <p class="reward__status">Disponible para ti</p>
+                        </article>
+
+                        <article class="reward">
+                            <div class="reward__cover"><span aria-hidden="true">🎓</span><small>Premium</small></div>
+                            <h3 class="reward__title">StackLibris Plus · 1 mes</h3>
+                            <p class="reward__desc">Más quizzes y herramientas para aprender a tu ritmo.</p>
+                            <p class="reward__cost">◎ 2000 puntos</p>
+                            <span class="btn btn--disabled btn--block btn--pill" aria-disabled="true">Puntos insuficientes</span>
+                            <p class="reward__status reward__status--missing">Te faltan 750 puntos</p>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="panel history">
+                    <div class="app-section__head">
+                        <h2 class="panel__title">Tus últimos canjes</h2>
+                        <a href="#" class="app-section__link">Ver historial →</a>
+                    </div>
+                    <div class="history__row">
+                        <span class="stats__icon" aria-hidden="true">✎</span>
+                        <p class="history__name">Planificador de exámenes <small>30 sep 2026 · Recompensa digital</small></p>
+                        <span class="history__points">−200 puntos</span>
+                        <span class="tag tag--success">Entregado</span>
+                        <a href="#" class="app-section__link">Descargar</a>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

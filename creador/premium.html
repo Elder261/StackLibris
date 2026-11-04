@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium - StackLibris</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="../../CSS/styles.css">
+</head>
+<body class="bg-neutral">
+
+    <div class="app-layout">
+
+        <!-- ===== SIDEBAR (se repite en todas las pantallas internas) ===== -->
+        <aside class="sidebar">
+            <a href="../estudiante/inicio.html" class="sidebar__logo">
+                <img src="../../img/Hero Media.png" alt="Logo StackLibris" width="28">
+                <span>StackLibris</span>
+            </a>
+
+            <nav class="sidebar__nav" aria-label="Mi espacio">
+                <p class="sidebar__label">Mi espacio</p>
+                <a href="../estudiante/inicio.html" class="sidebar__link">
+                    <svg class="sidebar__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>
+                    Inicio
+                </a>
+                <a href="mis-quizzes.html" class="sidebar__link">
+                    <svg class="sidebar__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4v16M8 4v16M12 4l5 16M16 4l5 16"/></svg>
+                    Mis Quizzes
+                </a>
+                <a href="subir-apunte.html" class="sidebar__link">
+                    <svg class="sidebar__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>
+                    Crear Quiz
+                </a>
+                <a href="canjear-puntos.html" class="sidebar__link">
+                    <svg class="sidebar__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="8" width="18" height="13" rx="1"/><path d="M3 12h18M12 8v13M12 8c-2-4-6-4-6-1s6 1 6 1zm0 0c2-4 6-4 6-1s-6 1-6 1z"/></svg>
+                    Canjear Puntos
+                </a>
+                <a href="#" class="sidebar__link">
+                    <svg class="sidebar__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3v18h18M7 15l4-4 3 3 6-6"/></svg>
+                    Mi Progreso
+                </a>
+                <a href="premium.html" class="sidebar__link sidebar__link--active">
+                    <svg class="sidebar__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8l4 4 5-6 5 6 4-4-2 11H5z"/></svg>
+                    Premium
+                </a>
+            </nav>
+
+            <div class="sidebar__promo">
+                <p class="sidebar__promo-title">✦ Aprender tiene premio</p>
+                <p class="sidebar__promo-text">Crea, practica y comparte. Cada paso suma puntos.</p>
+                <a href="canjear-puntos.html" class="sidebar__promo-link">Descubre tus recompensas →</a>
+            </div>
+
+            <div class="sidebar__user">
+                <span class="sidebar__avatar">LM</span>
+                <div>
+                    <p class="sidebar__user-name">Lucía Martínez</p>
+                    <p class="sidebar__user-role">Estudiante</p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- ===== CONTENIDO PRINCIPAL ===== -->
+        <div class="app-layout__content">
+
+            <header class="topbar">
+                <nav class="topbar__breadcrumb" aria-label="Ruta">
+                    <span>Mi espacio</span> <span>›</span> <strong>Planes y Precios</strong>
+                </nav>
+                <div class="topbar__actions">
+                    <a href="canjear-puntos.html" class="topbar__points">
+                        <svg class="topbar__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="9" r="6"/><circle cx="15" cy="15" r="6"/></svg>
+                        1.250 puntos
+                    </a>
+                    <a href="#" class="topbar__bell" aria-label="Notificaciones">
+                        <svg class="topbar__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4zM10 20a2 2 0 0 0 4 0"/></svg>
+                    </a>
+                </div>
+            </header>
+
+            <main class="app-main">
+
+                <section class="page-header">
+                    <h1 class="page-header__title">Premium</h1>
+                    <p class="page-header__desc">Desbloquea todo el potencial de StackLibris</p>
+                </section>
+
+                <!-- Switch Mensual / Anual hecho solo con CSS (radio + :checked) -->
+                <section class="pricing" aria-label="Planes">
+                    <input type="radio" name="facturacion" id="billing-monthly" class="pricing__radio" checked>
+                    <input type="radio" name="facturacion" id="billing-annual" class="pricing__radio">
+
+                    <div class="pricing__bar">
+                        <div class="pricing__toggle">
+                            <label for="billing-monthly" class="pricing__option pricing__option--monthly">Mensual</label>
+                            <label for="billing-annual" class="pricing__option pricing__option--annual">Anual <span class="tag tag--success">Ahorra 30%</span></label>
+                        </div>
+                        <p>Elige cómo quieres aprender.</p>
+                    </div>
+
+                    <div class="pricing__plans">
+                        <article class="plan">
+                            <h2 class="plan__name">Gratuito</h2>
+                            <p class="plan__price">US$/ 0</p>
+                            <p class="plan__desc">Lo esencial para empezar a aprender.</p>
+                            <ul class="plan__features">
+                                <li>Quizzes básicos</li>
+                                <li>Creación limitada</li>
+                                <li>Estadísticas básicas</li>
+                                <li>Seguimiento de progreso</li>
+                            </ul>
+                            <span class="btn btn--disabled btn--block btn--pill" aria-disabled="true">Plan Actual</span>
+                        </article>
+
+                        <article class="plan plan--featured">
+                            <div class="plan__head">
+                                <h2 class="plan__name">StackLibris Plus</h2>
+                                <span class="tag tag--primary">Más Popular</span>
+                            </div>
+                            <p class="plan__price plan__price--monthly">US$/ 9.90 <small>/mes</small></p>
+                            <p class="plan__price plan__price--annual">US$/ 6.93 <small>/mes · facturado anual</small></p>
+                            <p class="plan__desc">Más herramientas. Más posibilidades.</p>
+                            <ul class="plan__features">
+                                <li>Quizzes ilimitados</li>
+                                <li>Estadísticas avanzadas</li>
+                                <li>Diagnóstico con IA</li>
+                                <li>Recomendaciones personalizadas</li>
+                                <li>Seguimiento completo</li>
+                            </ul>
+                            <a href="#" class="btn btn--primary btn--block btn--pill">Mejorar a Premium</a>
+                        </article>
+                    </div>
+                </section>
+
+                <section class="app-section">
+                    <div class="app-section__head">
+                        <h2 class="app-section__title">Beneficios Premium</h2>
+                        <span class="field__hint">Un impulso extra para tus metas</span>
+                    </div>
+                    <div class="benefits">
+                        <article class="benefit">
+                            <span class="benefit__icon" aria-hidden="true">∞</span>
+                            <h3 class="benefit__title">Practica sin límites</h3>
+                            <p class="benefit__text">Resuelve todos los quizzes que necesites, a tu ritmo.</p>
+                        </article>
+                        <article class="benefit">
+                            <span class="benefit__icon" aria-hidden="true">📈</span>
+                            <h3 class="benefit__title">Entiende tu progreso</h3>
+                            <p class="benefit__text">Visualiza tus aciertos y el dominio de cada tema.</p>
+                        </article>
+                        <article class="benefit">
+                            <span class="benefit__icon" aria-hidden="true">✦</span>
+                            <h3 class="benefit__title">Aprende con IA</h3>
+                            <p class="benefit__text">Detecta tus puntos débiles y enfoca tus repasos.</p>
+                        </article>
+                        <article class="benefit">
+                            <span class="benefit__icon" aria-hidden="true">◎</span>
+                            <h3 class="benefit__title">Tu ruta de estudio</h3>
+                            <p class="benefit__text">Recibe recomendaciones según tu rendimiento.</p>
+                        </article>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

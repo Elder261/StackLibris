@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis quizzes - StackLibris</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="../../CSS/styles.css">
+</head>
+<body class="bg-neutral">
+
+    <div class="app-layout">
+
+        <!-- ===== SIDEBAR (se repite en todas las pantallas internas) ===== -->
+        <aside class="sidebar">
+            <a href="../estudiante/inicio.html" class="sidebar__logo">
+                <img src="../../img/Hero Media.png" alt="Logo StackLibris" width="28">
+                <span>StackLibris</span>
+            </a>
+
+            <nav class="sidebar__nav" aria-label="Mi espacio">
+                <p class="sidebar__label">Mi espacio</p>
+                <a href="../estudiante/inicio.html" class="sidebar__link">
+                    <svg class="sidebar__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>
+                    Inicio
+                </a>
+                <a href="mis-quizzes.html" class="sidebar__link sidebar__link--active">
+                    <svg class="sidebar__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4v16M8 4v16M12 4l5 16M16 4l5 16"/></svg>
+                    Mis Quizzes
+                </a>
+                <a href="subir-apunte.html" class="sidebar__link">
+                    <svg class="sidebar__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>
+                    Crear Quiz
+                </a>
+                <a href="canjear-puntos.html" class="sidebar__link">
+                    <svg class="sidebar__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="8" width="18" height="13" rx="1"/><path d="M3 12h18M12 8v13M12 8c-2-4-6-4-6-1s6 1 6 1zm0 0c2-4 6-4 6-1s-6 1-6 1z"/></svg>
+                    Canjear Puntos
+                </a>
+                <a href="#" class="sidebar__link">
+                    <svg class="sidebar__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3v18h18M7 15l4-4 3 3 6-6"/></svg>
+                    Mi Progreso
+                </a>
+                <a href="premium.html" class="sidebar__link">
+                    <svg class="sidebar__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8l4 4 5-6 5 6 4-4-2 11H5z"/></svg>
+                    Premium
+                </a>
+            </nav>
+
+            <div class="sidebar__promo">
+                <p class="sidebar__promo-title">✦ Aprender tiene premio</p>
+                <p class="sidebar__promo-text">Crea, practica y comparte. Cada paso suma puntos.</p>
+                <a href="canjear-puntos.html" class="sidebar__promo-link">Descubre tus recompensas →</a>
+            </div>
+
+            <div class="sidebar__user">
+                <span class="sidebar__avatar">LM</span>
+                <div>
+                    <p class="sidebar__user-name">Lucía Martínez</p>
+                    <p class="sidebar__user-role">Estudiante</p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- ===== CONTENIDO PRINCIPAL ===== -->
+        <div class="app-layout__content">
+
+            <header class="topbar">
+                <nav class="topbar__breadcrumb" aria-label="Ruta">
+                    <span>Mi espacio</span> <span>›</span> <strong>Mis Quizzes</strong>
+                </nav>
+                <div class="topbar__actions">
+                    <a href="canjear-puntos.html" class="topbar__points">
+                        <svg class="topbar__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="9" r="6"/><circle cx="15" cy="15" r="6"/></svg>
+                        1.250 puntos
+                    </a>
+                    <a href="#" class="topbar__bell" aria-label="Notificaciones">
+                        <svg class="topbar__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4zM10 20a2 2 0 0 0 4 0"/></svg>
+                    </a>
+                </div>
+            </header>
+
+            <main class="app-main">
+
+                <section class="page-header page-header--row">
+                    <div>
+                        <h1 class="page-header__title">Mis Quizzes</h1>
+                        <p class="page-header__desc">Tu conocimiento, organizado y listo para compartir.</p>
+                    </div>
+                    <a href="subir-apunte.html" class="btn btn--primary btn--pill">+ Crear Quiz</a>
+                </section>
+
+                <section class="stats" aria-label="Resumen">
+                    <div class="stats__item"><span class="stats__icon" aria-hidden="true">▤</span><p><span class="stats__value">4</span><br><span class="stats__label">Quizzes creados</span></p></div>
+                    <div class="stats__item"><span class="stats__icon" aria-hidden="true">✓</span><p><span class="stats__value">3</span><br><span class="stats__label">Publicados</span></p></div>
+                    <div class="stats__item"><span class="stats__icon" aria-hidden="true">👥</span><p><span class="stats__value">162</span><br><span class="stats__label">Intentos de la comunidad</span></p></div>
+                </section>
+
+                <form class="filters" role="search">
+                    <input type="search" class="field__input" placeholder="Buscar por título o tema" aria-label="Buscar por título o tema">
+                    <select class="field__select" aria-label="Curso">
+                        <option>Cálculo I</option>
+                        <option>Todos los cursos</option>
+                    </select>
+                    <select class="field__select" aria-label="Dificultad">
+                        <option>Dificultad</option>
+                        <option>Fácil</option>
+                        <option>Medio</option>
+                        <option>Difícil</option>
+                    </select>
+                </form>
+
+                <nav class="list-tabs" aria-label="Estado">
+                    <a href="#" class="list-tabs__tab list-tabs__tab--active">Todos (4)</a>
+                    <a href="#" class="list-tabs__tab">Publicados (3)</a>
+                    <a href="#" class="list-tabs__tab">Borradores (1)</a>
+                    <span class="list-tabs__sort">Más recientes ↓</span>
+                </nav>
+
+                <section class="my-quiz-grid" aria-label="Lista de mis quizzes">
+                    <article class="my-quiz">
+                        <div class="my-quiz__top">
+                            <span class="tag tag--success">Publicado</span>
+                            <button type="button" class="my-quiz__menu" aria-label="Más opciones">⋯</button>
+                        </div>
+                        <h2 class="my-quiz__title">Límites, derivadas e integrales</h2>
+                        <p class="my-quiz__meta">Cálculo I · Repaso general<br>☰ 3 preguntas · Medio · 24 intentos</p>
+                        <div class="my-quiz__footer">
+                            <span>Actualizado: Hoy</span>
+                            <a href="#" class="my-quiz__link">Gestionar quiz →</a>
+                        </div>
+                        <a href="resenas-mis-quizzes.html" class="tag tag--review">Reseñas (4)</a>
+                    </article>
+
+                    <article class="my-quiz">
+                        <div class="my-quiz__top">
+                            <span class="tag tag--success">Publicado</span>
+                            <button type="button" class="my-quiz__menu" aria-label="Más opciones">⋯</button>
+                        </div>
+                        <h2 class="my-quiz__title">Reglas de derivación</h2>
+                        <p class="my-quiz__meta">Cálculo I · Derivadas<br>☰ 12 preguntas · Medio · 86 intentos</p>
+                        <div class="my-quiz__footer">
+                            <span>Actualizado: 5 oct 2026</span>
+                            <a href="#" class="my-quiz__link">Gestionar quiz →</a>
+                        </div>
+                        <a href="resenas-mis-quizzes.html" class="tag tag--review">Reseñas (2)</a>
+                    </article>
+
+                    <article class="my-quiz">
+                        <div class="my-quiz__top">
+                            <span class="tag tag--success">Publicado</span>
+                            <button type="button" class="my-quiz__menu" aria-label="Más opciones">⋯</button>
+                        </div>
+                        <h2 class="my-quiz__title">Límites y continuidad</h2>
+                        <p class="my-quiz__meta">Cálculo I · Límites<br>☰ 10 preguntas · Fácil · 52 intentos</p>
+                        <div class="my-quiz__footer">
+                            <span>Actualizado: 3 oct 2026</span>
+                            <a href="#" class="my-quiz__link">Gestionar quiz →</a>
+                        </div>
+                        <a href="resenas-mis-quizzes.html" class="tag tag--review">Reseñas (9)</a>
+                    </article>
+
+                    <article class="my-quiz">
+                        <div class="my-quiz__top">
+                            <span class="tag tag--warning">Borrador</span>
+                            <button type="button" class="my-quiz__menu" aria-label="Más opciones">⋯</button>
+                        </div>
+                        <h2 class="my-quiz__title">Integración por partes</h2>
+                        <p class="my-quiz__meta">Cálculo I · Integrales<br>☰ 8 preguntas · Difícil · Sin publicar</p>
+                        <div class="my-quiz__footer">
+                            <span>Actualizado: 2 oct 2026</span>
+                            <a href="revisar-preguntas.html" class="my-quiz__link">Continuar edición →</a>
+                        </div>
+                        <a href="resenas-mis-quizzes.html" class="tag tag--review">Reseñas (12)</a>
+                    </article>
+                </section>
+            </main>
+        </div>
+    </div>
+</body>
+</html>

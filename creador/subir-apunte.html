@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subir apunte - StackLibris</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- CSS principal -->
+    <link rel="stylesheet" href="../../CSS/styles.css">
+</head>
+<body class="bg-neutral">
+
+    <div class="app-layout">
+
+        <!-- ===== SIDEBAR (se repite en todas las pantallas internas) ===== -->
+        <aside class="sidebar">
+            <a href="../estudiante/inicio.html" class="sidebar__logo">
+                <img src="../../img/Hero Media.png" alt="Logo StackLibris" width="28">
+                <span>StackLibris</span>
+            </a>
+
+            <nav class="sidebar__nav" aria-label="Mi espacio">
+                <p class="sidebar__label">Mi espacio</p>
+                <a href="../estudiante/inicio.html" class="sidebar__link">
+                    <svg class="sidebar__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>
+                    Inicio
+                </a>
+                <a href="mis-quizzes.html" class="sidebar__link">
+                    <svg class="sidebar__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4v16M8 4v16M12 4l5 16M16 4l5 16"/></svg>
+                    Mis Quizzes
+                </a>
+                <a href="subir-apunte.html" class="sidebar__link sidebar__link--active">
+                    <svg class="sidebar__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>
+                    Crear Quiz
+                </a>
+                <a href="canjear-puntos.html" class="sidebar__link">
+                    <svg class="sidebar__icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="8" width="18" height="13" rx="1"/><path d="M3 12h18M12 8v13M12 8c-2-4-6-4-6-1s6 1 6 1zm0 0c2-4 6-4 6-1s-6 1-6 1z"/></svg>
+                    Canjear Puntos
+                </a>
+                <a href="#" class="sidebar__link">
+                    <svg class="sidebar__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 3v18h18M7 15l4-4 3 3 6-6"/></svg>
+                    Mi Progreso
+                </a>
+                <a href="premium.html" class="sidebar__link">
+                    <svg class="sidebar__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8l4 4 5-6 5 6 4-4-2 11H5z"/></svg>
+                    Premium
+                </a>
+            </nav>
+
+            <div class="sidebar__promo">
+                <p class="sidebar__promo-title">✦ Aprender tiene premio</p>
+                <p class="sidebar__promo-text">Crea, practica y comparte. Cada paso suma puntos.</p>
+                <a href="canjear-puntos.html" class="sidebar__promo-link">Descubre tus recompensas →</a>
+            </div>
+
+            <div class="sidebar__user">
+                <span class="sidebar__avatar">LM</span>
+                <div>
+                    <p class="sidebar__user-name">Lucía Martínez</p>
+                    <p class="sidebar__user-role">Estudiante</p>
+                </div>
+            </div>
+        </aside>
+
+        <!-- ===== CONTENIDO PRINCIPAL ===== -->
+        <div class="app-layout__content">
+
+            <header class="topbar">
+                <nav class="topbar__breadcrumb" aria-label="Ruta">
+                    <span>Mi espacio</span> <span>›</span> <strong>Subir Apunte</strong>
+                </nav>
+                <div class="topbar__actions">
+                    <a href="canjear-puntos.html" class="topbar__points">
+                        <svg class="topbar__icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="9" r="6"/><circle cx="15" cy="15" r="6"/></svg>
+                        1.250 puntos
+                    </a>
+                    <a href="#" class="topbar__bell" aria-label="Notificaciones">
+                        <svg class="topbar__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4zM10 20a2 2 0 0 0 4 0"/></svg>
+                    </a>
+                </div>
+            </header>
+
+            <main class="app-main">
+
+                <section class="page-header">
+                    <h1 class="page-header__title">Subir Apunte</h1>
+                    <p class="page-header__desc">Transforma tus apuntes en una nueva forma de aprender.</p>
+                </section>
+
+                <ol class="stepper" aria-label="Pasos para crear un quiz">
+                    <li class="stepper__step stepper__step--current" aria-current="step"><span class="stepper__num">1</span> Subir apunte</li>
+                    <li class="stepper__step"><span class="stepper__num">2</span> Revisar preguntas</li>
+                    <li class="stepper__step"><span class="stepper__num">3</span> Categorizar quiz</li>
+                </ol>
+
+                <section class="panel">
+                    <div class="panel__head">
+                        <h2 class="panel__title">Tu apunte, el punto de partida</h2>
+                        <span class="tag">PDF · Máx. 20 MB</span>
+                    </div>
+
+                    <form action="revisar-preguntas.html">
+                        <label for="archivo-pdf" class="dropzone">
+                            <span class="dropzone__icon" aria-hidden="true">⇪</span>
+                            <span>Arrastra y suelta tu archivo PDF aquí (Solo archivos PDF)</span>
+                            <span class="dropzone__hint">o selecciona un archivo de tu dispositivo</span>
+                            <span class="btn btn--outline btn--pill">Seleccionar PDF</span>
+                            <input type="file" id="archivo-pdf" name="apunte" accept=".pdf,application/pdf" class="dropzone__input">
+                        </label>
+
+                        <div class="file-item">
+                            <span aria-hidden="true">🗎</span>
+                            <p class="file-item__name">Apuntes_Cálculo_I.pdf <small>2,4 MB · 12 páginas · Listo para generar</small></p>
+                            <span class="tag tag--success">Cargado</span>
+                            <button type="button" class="file-item__remove" aria-label="Quitar archivo">×</button>
+                        </div>
+
+                        <div class="form-grid">
+                            <div class="field">
+                                <label for="curso" class="field__label">Curso</label>
+                            <select id="curso" name="curso" class="field__select" required>
+                                <option selected>Cálculo I</option>
+                                <option>Cálculo II</option>
+                                <option>Álgebra Lineal</option>
+                                <option>Física Básica</option>
+                                <option>Química</option>
+                            </select>
+                            </div>
+                            <div class="field">
+                                <label for="tema" class="field__label">Tema</label>
+                                <input type="text" id="tema" name="tema" class="field__input" value="Límites, derivadas e integrales" required>
+                            </div>
+                            <button type="submit" class="btn btn--primary btn--pill form-grid__full">✦ Generar Quiz</button>
+                        </div>
+                    </form>
+                </section>
+
+                <p class="privacy-note">🛡 Tu archivo es privado. Podrás revisar cada pregunta antes de publicar.</p>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
