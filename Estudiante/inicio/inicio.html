@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio - StackLibris</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/styles.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+        <!-- Sidebar (Desktop) -->
+        <aside class="sidebar">
+            <div class="sidebar__brand">
+                <span style="font-size: 24px;">📚</span>
+                <span class="navbar__logo-text">StackLibris</span>
+            </div>
+            <nav class="sidebar__nav">
+                <span class="sidebar__label">MI ESPACIO</span>
+                <a href="inicio.html" class="sidebar__link sidebar__link--active">🏠 Inicio</a>
+                <a href="../creador/mis-quizzes.html" class="sidebar__link">🗂️ Mis Quizzes</a>
+                <a href="../creador/subir-apunte.html" class="sidebar__link">➕ Crear Quiz</a>
+                <a href="../creador/canjear-puntos.html" class="sidebar__link">🎁 Canjear Puntos</a>
+                <a href="#" class="sidebar__link">📈 Mi Progreso</a>
+                <a href="#" class="sidebar__link">👑 Premium</a>
+            </nav>
+            
+            <div class="sidebar__promo">
+                <span style="font-size: 20px;">✨</span>
+                <h4>Aprender tiene premio</h4>
+                <p>Crea, practica y comparte. Cada paso suma puntos.</p>
+                <a href="../creador/canjear-puntos.html" class="link-primary">Descubre tus recompensas →</a>
+            </div>
+
+            <div class="sidebar__user">
+                <div class="user-avatar">LM</div>
+                <div class="user-info">
+                    <strong>Lucía Martínez</strong>
+                    <span>Estudiante</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="dashboard-main">
+            <!-- Header Mobile Only -->
+            <header class="mobile-header">
+                <div class="sidebar__brand">
+                    <span>📚</span> <strong>StackLibris</strong>
+                </div>
+                <div class="mobile-header__actions">
+                    <span class="link-primary">👑 Premium</span>
+                    <span>🔔</span>
+                </div>
+            </header>
+
+            <div class="dashboard-content">
+                <div class="dashboard-header">
+                    <span class="breadcrumb">Mi espacio > <strong>Inicio</strong></span>
+                    <a href="#" class="link-neutral">❔ ¿Necesitas ayuda?</a>
+                </div>
+
+                <section class="welcome-section">
+                    <h1 class="hero__title">¡Hola, Lucía!</h1>
+                    <p class="section-description">Un buen momento para aprender algo nuevo. ¿Qué quieres practicar hoy?</p>
+                </section>
+
+                <section class="search-section">
+                    <div class="search-card">
+                        <div class="search-card__text">
+                            <h3>Tu próxima práctica empieza aquí</h3>
+                            <p>Encuentra un quiz y pon a prueba lo que sabes.</p>
+                        </div>
+                        <div class="search-bar search-bar--dashboard">
+                            <span class="search-bar__icon">🔍</span>
+                            <input type="text" class="search-bar__input" placeholder="Buscar por curso o tema...">
+                            <button class="btn btn--primary">Buscar</button>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="quick-links">
+                    <a href="../creador/mis-quizzes.html" class="quick-card">
+                        <span class="quick-card__icon">🗂️</span>
+                        <div>
+                            <h4>Mis Quizzes</h4>
+                            <p>Organiza tu biblioteca</p>
+                        </div>
+                        <span class="quick-card__arrow">↗</span>
+                    </a>
+                    <a href="../creador/subir-apunte.html" class="quick-card">
+                        <span class="quick-card__icon">➕</span>
+                        <div>
+                            <h4>Crear Quiz</h4>
+                            <p>Convierte apuntes en práctica</p>
+                        </div>
+                        <span class="quick-card__arrow">↗</span>
+                    </a>
+                    <a href="#" class="quick-card">
+                        <span class="quick-card__icon">📈</span>
+                        <div>
+                            <h4>Mi Progreso</h4>
+                            <p>Revisa tu aprendizaje</p>
+                        </div>
+                        <span class="quick-card__arrow">↗</span>
+                    </a>
+                </section>
+
+                <section class="quizzes-section">
+                    <div class="section-header">
+                        <h2>Recomendados para practicar</h2>
+                        <a href="explorar.html" class="link-primary">Explorar quizzes →</a>
+                    </div>
+                    <div class="quiz-grid quiz-grid--dashboard">
+                        <!-- Tarjeta Recomendada 1 -->
+                        <div class="quiz-card quiz-card--white">
+                            <div class="quiz-card__body">
+                                <h3>Cálculo I - Derivadas</h3>
+                                <div class="quiz-card__meta">
+                                    <span class="quiz-card__author">Por Alex Rivera</span>
+                                    <span class="quiz-card__rating" style="color: var(--color-success); font-weight:600;">★ 4.8 estrellas</span>
+                                </div>
+                                <div class="quiz-card__tags">
+                                    <span class="tag">20 preguntas</span>
+                                    <span class="tag tag--warning">Difícil</span>
+                                </div>
+                                <p class="quiz-card__time">Actualizado hace 3 días</p>
+                                <button class="btn btn--primary btn--block">Comenzar quiz</button>
+                            </div>
+                        </div>
+                        <!-- Tarjeta Recomendada 2 -->
+                        <div class="quiz-card quiz-card--white">
+                            <div class="quiz-card__body">
+                                <h3>Física Básica</h3>
+                                <div class="quiz-card__meta">
+                                    <span class="quiz-card__author">Por Nico Rojas</span>
+                                    <span class="quiz-card__rating" style="color: var(--color-success); font-weight:600;">★ 4.9 estrellas</span>
+                                </div>
+                                <div class="quiz-card__tags">
+                                    <span class="tag">10 preguntas</span>
+                                    <span class="tag tag--warning">Difícil</span>
+                                </div>
+                                <p class="quiz-card__time">Actualizado hace 3 días</p>
+                                <button class="btn btn--primary btn--block">Comenzar quiz</button>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <!-- Bottom Navigation (Mobile Only) -->
+        <nav class="bottom-nav">
+            <a href="inicio.html" class="bottom-nav__item bottom-nav__item--active">
+                <span>🏠</span><span>Inicio</span>
+            </a>
+            <a href="explorar.html" class="bottom-nav__item">
+                <span>🔍</span><span>Quizzes</span>
+            </a>
+            <a href="../creador/subir-apunte.html" class="bottom-nav__item">
+                <span>➕</span><span>Crear</span>
+            </a>
+            <a href="#" class="bottom-nav__item">
+                <span>👤</span><span>Perfil</span>
+            </a>
+        </nav>
+    </div>
+</body>
+</html>
